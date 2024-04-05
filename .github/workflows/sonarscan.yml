@@ -11,8 +11,8 @@ jobs:
     - name: Setup Java JDK
       uses: actions/setup-java@v4.2.1
       with:
-        java-version: '11'
-        distribution: 'temurin'
+        java-version: '17'
+        distribution: 'adopt'
         cache: maven
     - name: Build with Maven cloud
       run:  mvn -B verify sonar:sonar -Dsonar.projectKey=java-reachability-playground -Dsonar.organization="Pratik Khasnabis" -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=$SONAR_TOKEN
